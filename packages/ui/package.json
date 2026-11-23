@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/ui",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -9,13 +9,16 @@
       "import": "./dist/index.js"
     }
   },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
   "scripts": {
     "build": "tsc -b",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write . --use-gitignore",
     "format:check": "prettier --check . --use-gitignore",
-    "clean": "rm -rf dist *.tsbuildinfo"
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true});fs.rmSync('tsconfig.tsbuildinfo',{force:true})\""
   },
   "dependencies": {
     "react": "^19.0.0",

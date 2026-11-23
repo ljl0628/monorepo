@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write . --use-gitignore",
     "format:check": "prettier --check . --use-gitignore",
-    "clean": "rm -rf dist *.tsbuildinfo"
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true});fs.rmSync('tsconfig.tsbuildinfo',{force:true})\""
   },
   "dependencies": {
     "@monorepo/shared": "workspace:*",
