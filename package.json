@@ -1,0 +1,36 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @monorepo/web dev",
+    "dev:server": "pnpm --filter @monorepo/server dev",
+    "build:shared": "pnpm --filter @monorepo/shared build",
+    "build:ui": "pnpm --filter @monorepo/ui build",
+    "build:utils": "pnpm --filter @monorepo/utils build",
+    "build:web": "pnpm --filter @monorepo/web build",
+    "build:server": "pnpm --filter @monorepo/server build",
+    "build": "turbo build",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "format": "pnpm -r format",
+    "format:check": "pnpm -r format:check",
+    "clean": "pnpm -r clean"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.4",
+    "turbo": "^2.9.9",
+    "typescript-eslint": "^8.61.0"
+  }
+}

@@ -1,0 +1,6 @@
+**/node_modules/**
+**/dist/**
+**/*.tsbuildinfo
+**/.turbo/**
+pnpm-lock.yaml
+server.log
